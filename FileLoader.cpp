@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <regex>
 #include "FileLoader.h"
 
 using namespace std;

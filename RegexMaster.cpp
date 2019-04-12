@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "TimeMachine.h"
+#include "FileCreator.h"
 
 using namespace std;
 
@@ -45,5 +46,7 @@ int main() {
     cout << "Czas: " << asctime(timeInfo) << endl;
     cout << "Czas -1: " << yesDt << endl;
 
+    FileCreator fileCreator;
+    fileCreator.createOutputFile("ABCDEFGHIJ", "pierwszy.txt");
     return 0;
 }
