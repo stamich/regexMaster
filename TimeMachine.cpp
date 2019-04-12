@@ -7,77 +7,160 @@
 #include "TimeMachine.h"
 
 TimeMachine::TimeMachine() {
-
-    time(&now);
-    timeInfo = localtime(&now);
-    asctime(timeInfo);
 }
 
-struct tm* TimeMachine::returnDayOfWeek(int periodBackwards) {
+char* TimeMachine::returnDayOfWeek(int periodBackwards) {
+
+    time(&now);
+    struct tm* timeInfo;
+
     switch (periodBackwards){
         case 1:
-            dayOfWeek = timeInfo - (24 * 60 * 60);
+            now = now - (24*60*60);
+            timeInfo = localtime(&now);
+            dayOfWeek = asctime(timeInfo);
             break;
         case 2:
-            dayOfWeek = timeInfo - (48 * 60 * 60);
+            now = now - (48 * 60 * 60);
+            timeInfo = localtime(&now);
+            dayOfWeek = asctime(timeInfo);
             break;
         case 3:
-            dayOfWeek = timeInfo - (72 * 60 * 60);
+            now = now - (72 * 60 * 60);
+            timeInfo = localtime(&now);
+            dayOfWeek = asctime(timeInfo);
             break;
         case 4:
-            dayOfWeek = timeInfo - (96 * 60 * 60);
+            now = now - (96 * 60 * 60);
+            timeInfo = localtime(&now);
+            dayOfWeek = asctime(timeInfo);
             break;
         case 5:
-            dayOfWeek = timeInfo - (120 * 60 * 60);
+            now = now - (120 * 60 * 60);
+            timeInfo = localtime(&now);
+            dayOfWeek = asctime(timeInfo);
             break;
         case 6:
-            dayOfWeek = timeInfo - (144 * 60 * 60);
+            now = now - (144 * 60 * 60);
+            timeInfo = localtime(&now);
+            dayOfWeek = asctime(timeInfo);
+            break;
     }
     return dayOfWeek;
 }
 
-struct tm* TimeMachine::returnWeek(int periodBackwards) {
+char* TimeMachine::returnWeek(int periodBackwards) {
+
+    time(&now);
+    struct tm* timeInfo;
+
     switch (periodBackwards){
         case 1:
-            week = timeInfo - (168 * 60 * 60);
+            now = now - (168 * 60 * 60);
+            timeInfo = localtime(&now);
+            week = asctime(timeInfo);
             break;
         case 2:
-            week = timeInfo - (336 * 60 * 60);
+            now = now - (336 * 60 * 60);
+            timeInfo = localtime(&now);
+            week = asctime(timeInfo);
             break;
         case 3:
-            week = timeInfo - (504 * 60 * 60);
+            now = now - (504 * 60 * 60);
+            timeInfo = localtime(&now);
+            week = asctime(timeInfo);
             break;
         case 4:
-            week = timeInfo - (672 * 60 * 60);
+            now = now - (672 * 60 * 60);
+            timeInfo = localtime(&now);
+            week = asctime(timeInfo);
     }
     return week;
 }
 
-struct tm* TimeMachine::returnMonth(int periodBackwards) {
+char* TimeMachine::returnMonth(int periodBackwards) {
+    time(&now);
+    struct tm* timeInfo;
+
     switch (periodBackwards){
         case 1:
-            month = timeInfo - (720 * 60 * 60);
+            now = now - (744 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
             break;
         case 2:
-            month = timeInfo - (1440 * 60 * 60);
+            now = now - (1440 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
             break;
         case 3:
-            month = timeInfo - (2160 * 60 * 60);
+            now = now - (2160 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
+            break;
+        case 4:
+            now = now - (2880 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
+            break;
+        case 5:
+            now = now - (3600 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
+            break;
+        case 6:
+            now = now - (4320 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
+            break;
+        case 7:
+            now = now - (5040 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
+            break;
+        case 8:
+            now = now - (5760 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
+            break;
+        case 9:
+            now = now - (6480 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
+            break;
+        case 10:
+            now = now - (7200 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
+            break;
+        case 11:
+            now = now - (7920 * 60 * 60);
+            timeInfo = localtime(&now);
+            month = asctime(timeInfo);
             break;
     }
     return month;
 }
 
-struct tm* TimeMachine::returnYear(int periodBackwards) {
+char* TimeMachine::returnYear(int periodBackwards) {
+    time(&now);
+    struct tm* timeInfo;
+
     switch (periodBackwards){
         case 1:
-            year = timeInfo - (8640 * 60 * 60);
+            now = now  - (8760 * 60 * 60);
+            timeInfo = localtime(&now);
+            year = asctime(timeInfo);
             break;
         case 2:
-            year = timeInfo - (17280 * 60 * 60);
+            now = now - (17520 * 60 * 60);
+            timeInfo = localtime(&now);
+            year = asctime(timeInfo);
             break;
         case 3:
-            year = timeInfo - (25920 * 60 * 60);
+            now = now - (26280 * 60 * 60);
+            timeInfo = localtime(&now);
+            year = asctime(timeInfo);
             break;
     }
     return year;

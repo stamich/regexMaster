@@ -12,20 +12,20 @@ using namespace std;
 
 class TimeMachine {
 
-    time_t now;
+    time_t now = time(NULL);
     struct tm* timeInfo;
-    struct tm* dayOfWeek;
-    struct tm* week;
-    struct tm* month;
-    struct tm* year;
+    char* dayOfWeek;
+    char* week;
+    char* month;
+    char* year;
 
 public:
     TimeMachine();
 
-    struct tm* returnDayOfWeek(int periodBackwards);
-    struct tm* returnWeek(int periodBackwards);
-    struct tm* returnMonth(int periodBackwards);
-    struct tm* returnYear(int periodBackwards);
+    char* returnDayOfWeek(int periodBackwards);
+    char* returnWeek(int periodBackwards);
+    char* returnMonth(int periodBackwards);
+    char* returnYear(int periodBackwards);
 
     ~TimeMachine();
 };
