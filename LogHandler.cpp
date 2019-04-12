@@ -16,6 +16,8 @@ LogHandler::LogHandler() {
 
 list<string> LogHandler::loadLogFile(string absolutePath) {
 
+    charset = "UTF-8";
+
     list<string> result;
     string path = absolutePath;
     long lineCounter;

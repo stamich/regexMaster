@@ -14,6 +14,7 @@ using namespace std;
 class LogHandler {
 
     string line;
+    string charset;
     string newFile;
     struct tm* today;
     struct tm* formatter;

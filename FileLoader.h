@@ -14,6 +14,11 @@ typedef double number;
 class FileLoader{
     string line;
     string newFile;
+
+    string name1;
+    string name2;
+    string name3;
+
     string regexCard;
     string charset;
 
