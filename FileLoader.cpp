@@ -2,6 +2,7 @@
 // Created by Michal S. on 2019-04-11.
 //
 
+#include <exception>
 #include <iostream>
 #include <fstream>
 #include <regex>
@@ -30,13 +31,31 @@ string FileLoader::handleInputFile(string absolutePath) {
             }
             //result.push_back(line);
         }
-    } catch (const exception e){
-        cout << "Exception thrown: "  << endl;
+    } catch (exception& e){
+        cout << e.what() << endl;
     }
     return newFile;
 }
 
 string FileLoader::getTheNewestFile(string absolutePath) {
+
+//    FILETIME bestDate = { 0, 0 };
+//    FILETIME curDate;
+//    string name;
+//    CFileFind finder;
+//
+//    finder.FindFile("*.png");
+//    while (finder.FindNextFile())
+//    {
+//        finder.GetCreationTime(&curDate);
+//
+//        if (CompareFileTime(&curDate, &bestDate) > 0)
+//        {
+//            bestDate = curDate;
+//            name = finder.GetFileName().GetString();
+//        }
+//    }
+//    return name;
 
 }
 

@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <algorithm>
 #include "TimeMachine.h"
 #include "FileCreator.h"
 
@@ -47,6 +48,12 @@ int main() {
     cout << "Czas -1: " << yesDt << endl;
 
     FileCreator fileCreator;
-    fileCreator.createOutputFile("ABCDEFGHIJ", "pierwszy.txt");
+    fileCreator.createOutputFile("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "pierwszy.txt");
+    string a = "Zakopane na pokaz";
+    string b;
+    //reverse(a.begin(), a.end()); // from <algorithm>
+    b.assign(a.rbegin(), a.rend()); // from <string>
+
+    fileCreator.createOutputFile(a, "drugi.txt");
     return 0;
 }

@@ -5,11 +5,18 @@
 #ifndef REGEXMASTER_FILECREATOR_H
 #define REGEXMASTER_FILECREATOR_H
 
+#include <exception>
 #include <string>
 #include <ctime>
 #include <iostream>
 
 using namespace std;
+
+class StackTrace : exception{
+    const char* what() const noexcept {
+        return "The exception was thrown!\n";
+    }
+};
 
 class FileCreator{
     time_t now = time(0); // current date/time based on system

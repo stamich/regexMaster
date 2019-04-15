@@ -2,6 +2,7 @@
 // Created by Michal S. on 2019-04-11.
 //
 
+#include <exception>
 #include <string>
 #include <ctime>
 #include <iostream>
@@ -19,13 +20,17 @@ void FileCreator::createOutputFile(string input, string fileName) {
     long fileLength = input.length();
 
     ofstream outputFile;
-    outputFile.open(fileName);
-    while (fileLength>0){
-        outputFile << input << endl;
-        outputFile << "END-OF-FILE";
-        fileLength--;
+    try {
+        outputFile.open(fileName);
+        while (fileLength>=0){
+            outputFile << fileLength << " " << input << " " << "\r\n";
+            if (fileLength == 0)
+                outputFile << "THE-END-OF-FILE";
+            fileLength--;
+        }
+    }catch (exception& e){
+        cout << e.what() << endl;
     }
-
     outputFile.close();
 }
 
