@@ -59,6 +59,15 @@ int main() {
     properties.setIncomeDataPath("/home/michal/regex/income/");
     properties.setOutcomeDataPath("/home/michal/regex/outcome/");
     properties.setLogFilePath("/home/michal/regex/log/");
+    properties.setIncomeFilesFormula("");
+    properties.setOutcomeFilesFormula("");
+    properties.setLastFileFormula("");
+    properties.setCardFormula("");
+    properties.setFileMask1("");
+    properties.setFileMask2("");
+    properties.setFileMask3("");
+    properties.setFileMask4("");
+    properties.setFileMask5("");
 
     cout << "\r\n" << "SETTINGS:" << "\r\n";
     cout << "Version:      " << properties.getVersion() << endl;

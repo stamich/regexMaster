@@ -91,6 +91,78 @@ void RegexMasterProperties::setLogFilePath(const string &logFilePath) {
     logFilePath_ = logFilePath;
 }
 
+const string &RegexMasterProperties::getIncomeFilesFormula() const {
+    return incomeFilesFormula;
+}
+
+void RegexMasterProperties::setIncomeFilesFormula(const string &incomeFilesFormula) {
+    RegexMasterProperties::incomeFilesFormula = incomeFilesFormula;
+}
+
+const string &RegexMasterProperties::getLastFileFormula() const {
+    return lastFileFormula;
+}
+
+void RegexMasterProperties::setLastFileFormula(const string &lastFileFormula) {
+    RegexMasterProperties::lastFileFormula = lastFileFormula;
+}
+
+const string &RegexMasterProperties::getOutcomeFilesFormula() const {
+    return outcomeFilesFormula;
+}
+
+void RegexMasterProperties::setOutcomeFilesFormula(const string &outcomeFilesFormula) {
+    RegexMasterProperties::outcomeFilesFormula = outcomeFilesFormula;
+}
+
+const string &RegexMasterProperties::getCardFormula() const {
+    return cardFormula;
+}
+
+void RegexMasterProperties::setCardFormula(const string &cardFormula) {
+    RegexMasterProperties::cardFormula = cardFormula;
+}
+
+const string &RegexMasterProperties::getFileMask1() const {
+    return fileMask1;
+}
+
+void RegexMasterProperties::setFileMask1(const string &fileMask1) {
+    RegexMasterProperties::fileMask1 = fileMask1;
+}
+
+const string &RegexMasterProperties::getFileMask2() const {
+    return fileMask2;
+}
+
+void RegexMasterProperties::setFileMask2(const string &fileMask2) {
+    RegexMasterProperties::fileMask2 = fileMask2;
+}
+
+const string &RegexMasterProperties::getFileMask3() const {
+    return fileMask3;
+}
+
+void RegexMasterProperties::setFileMask3(const string &fileMask3) {
+    RegexMasterProperties::fileMask3 = fileMask3;
+}
+
+const string &RegexMasterProperties::getFileMask4() const {
+    return fileMask4;
+}
+
+void RegexMasterProperties::setFileMask4(const string &fileMask4) {
+    RegexMasterProperties::fileMask4 = fileMask4;
+}
+
+const string &RegexMasterProperties::getFileMask5() const {
+    return fileMask5;
+}
+
+void RegexMasterProperties::setFileMask5(const string &fileMask5) {
+    RegexMasterProperties::fileMask5 = fileMask5;
+}
+
 RegexMasterProperties::~RegexMasterProperties(){
 
 }
