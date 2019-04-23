@@ -2,6 +2,7 @@
 // Created by Michal S. on 2019-04-11.
 //
 
+//#include <filesystem>
 #include <exception>
 #include <iostream>
 #include <fstream>
@@ -9,6 +10,7 @@
 #include "FileLoader.h"
 
 using namespace std;
+//namespace fs = std::filesystem;
 
 FileLoader::FileLoader(){
     regexCard = "[|][0-9]{16}[|]";
@@ -39,23 +41,10 @@ string FileLoader::handleInputFile(string absolutePath) {
 
 string FileLoader::getTheNewestFile(string absolutePath) {
 
-//    FILETIME bestDate = { 0, 0 };
-//    FILETIME curDate;
-//    string name;
-//    CFileFind finder;
-//
-//    finder.FindFile("*.png");
-//    while (finder.FindNextFile())
-//    {
-//        finder.GetCreationTime(&curDate);
-//
-//        if (CompareFileTime(&curDate, &bestDate) > 0)
-//        {
-//            bestDate = curDate;
-//            name = finder.GetFileName().GetString();
-//        }
+//    string path = "/Users/EB79OJ/Projects/H2H_Reconciliation/src/main/resources/in/";
+//    for (const auto & entry : fs::directory_iterator(path)) {
+//        cout << entry.path() << endl;
 //    }
-//    return name;
 
 }
 

@@ -16,7 +16,7 @@ char* TimeMachine::returnDayOfWeek(int periodBackwards) {
 
     switch (periodBackwards){
         case 1:
-            now = now - (24*60*60);
+            now = now - (24 * 60 * 60);
             timeInfo = localtime(&now);
             dayOfWeek = asctime(timeInfo);
             break;
