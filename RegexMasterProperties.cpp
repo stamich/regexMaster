@@ -164,5 +164,4 @@ void RegexMasterProperties::setFileMask5(const string &fileMask5) {
 }
 
 RegexMasterProperties::~RegexMasterProperties(){
-
 }
