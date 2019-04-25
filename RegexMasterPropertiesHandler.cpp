@@ -30,3 +30,6 @@ const string RegexMasterPropertiesHandler::loadConfigurationFile(string filePath
 const string RegexMasterPropertiesHandler::ambiguityResolver() {
 
 }
+
+RegexMasterPropertiesHandler::~RegexMasterPropertiesHandler() {
+}

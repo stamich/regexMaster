@@ -8,6 +8,7 @@
 #include <fstream>
 #include <regex>
 #include "FileLoader.h"
+#include "RegexMasterPropertiesHandler.h"
 
 using namespace std;
 //namespace fs = std::filesystem;
