@@ -2,6 +2,8 @@
 project(regexMaster)
 
 set(CMAKE_CXX_STANDARD 17)
+set(GCC_COVERAGE_COMPILE_FLAGS "-lstdc++fs")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
 set(CMAKE_LEGACY_CYGWIN_WIN32 0) # Remove when CMake >= 2.8.4 is required
 
 add_executable(regexMaster RegexMaster.cpp FileLoader.h FileLoader.cpp FileCreator.h FileCreator.cpp TimeMachine.cpp TimeMachine.h

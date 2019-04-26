@@ -2,8 +2,9 @@
 // Created by Michal S. on 2019-04-11.
 //
 
-//#include <filesystem>
 #include <exception>
+#include <experimental/filesystem>
+#include <python3.6m/pyconfig.h>
 #include <iostream>
 #include <fstream>
 #include <regex>
@@ -11,7 +12,7 @@
 #include "RegexMasterPropertiesHandler.h"
 
 using namespace std;
-//namespace fs = std::filesystem;
+namespace fs = std::experimental::filesystem;
 
 FileLoader::FileLoader(){
     regexCard = "[|][0-9]{16}[|]";
@@ -42,10 +43,10 @@ string FileLoader::handleInputFile(string absolutePath) {
 
 string FileLoader::getTheNewestFile(string absolutePath) {
 
-//    string path = "/Users/EB79OJ/Projects/H2H_Reconciliation/src/main/resources/in/";
-//    for (const auto & entry : fs::directory_iterator(path)) {
-//        cout << entry.path() << endl;
-//    }
+    string path = "/home/michal/test_files/";
+    for (const auto & entry : fs::directory_iterator(absolutePath)) {
+        cout << entry.path() << endl;
+    }
 
 }
 
