@@ -20,7 +20,7 @@ FileLoader::FileLoader(){
     charset = "UTF-8";
 }
 
-string FileLoader::handleInputFile(string absolutePath) {
+string FileLoader::handleInputFile(const string &absolutePath) {
 
     string path = absolutePath;
     long lineCounter;
@@ -42,7 +42,7 @@ string FileLoader::handleInputFile(string absolutePath) {
     return newFile;
 }
 
-string FileLoader::getTheNewestFile(string absolutePath) {
+string FileLoader::getTheNewestFile(const string &absolutePath) {
 
     std::string path = "/home/michal/test_files/";
     for (const auto & entry : fs::directory_iterator(absolutePath)) {
@@ -51,16 +51,22 @@ string FileLoader::getTheNewestFile(string absolutePath) {
 
 }
 
-string FileLoader::getTheNewestFileByExtension(string path, string extension) {
+string FileLoader::getTheNewestFileByExtension(const string &filePath, const string &extension) {
 
+    std::string path = "/home/michal/test_files/";
+    bool finder = filePath.substr(filePath.find_last_of(".") + 1) == "txt";
+    if (finder){
+        cout << "Yes..." << endl;
+    } else
+    cout << "file not found..." << endl;
+//    return (filePath.size() >= extension.size()) && equal(extension.rbegin(), extension.rend(), filePath.rbegin());
 }
 
-string FileLoader::getTheNewestFileByName(string path, string name) {
+string FileLoader::getTheNewestFileByName(const string path, const string name) {
+
 
 }
 
 FileLoader::~FileLoader() {
 
 }
-
-
