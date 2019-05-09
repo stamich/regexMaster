@@ -10,9 +10,7 @@
 #include <ctime>
 #include <iostream>
 
-using namespace std;
-
-class StackTrace : exception{
+class StackTrace : std::exception{
     const char* what() const noexcept {
         return "The exception was thrown!\n";
     }
@@ -27,12 +25,12 @@ class FileCreator{
     tm *gmtm = gmtime(&now); // converts to time struct for UTC
     //dt = asctime(gmtm);
 
-    string outPath;
+    std::string outPath;
 
 public:
     FileCreator();
 
-    void createOutputFile(string input, string fileName);
+    void createOutputFile(std::string input, std::string fileName);
     ~FileCreator();
 };
 

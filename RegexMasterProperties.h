@@ -8,109 +8,108 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
 
 class RegexMasterProperties {
-    string version_;
-    string threadNumber_;
-    string instanceNumber_;
-    string scalability_;
-    string defaultDate_;
-    string timeZone_;
-    string charset_;
-    string incomeDataPath_;
-    string outcomeDataPath_;
-    string logFilePath_;
+    std::string version_;
+    std::string threadNumber_;
+    std::string instanceNumber_;
+    std::string scalability_;
+    std::string defaultDate_;
+    std::string timeZone_;
+    std::string charset_;
+    std::string incomeDataPath_;
+    std::string outcomeDataPath_;
+    std::string logFilePath_;
 
-    string incomeFilesFormula;
-    string lastFileFormula;
-    string outcomeFilesFormula;
-    string cardFormula;
-    string fileMask1;
-    string fileMask2;
-    string fileMask3;
-    string fileMask4;
-    string fileMask5;
+    std::string incomeFilesFormula;
+    std::string lastFileFormula;
+    std::string outcomeFilesFormula;
+    std::string cardFormula;
+    std::string fileMask1;
+    std::string fileMask2;
+    std::string fileMask3;
+    std::string fileMask4;
+    std::string fileMask5;
 
 public:
 
     RegexMasterProperties();
 
-    const string &getVersion() const;
+    const std::string &getVersion() const;
 
-    void setVersion(const string &version);
+    void setVersion(const std::string &version);
 
-    const string &getThreadNumber() const;
+    const std::string &getThreadNumber() const;
 
-    void setThreadNumber(const string &threadNumber);
+    void setThreadNumber(const std::string &threadNumber);
 
-    const string &getInstanceNumber() const;
+    const std::string &getInstanceNumber() const;
 
-    void setInstanceNumber(const string &instanceNumber);
+    void setInstanceNumber(const std::string &instanceNumber);
 
-    const string &getScalability() const;
+    const std::string &getScalability() const;
 
-    void setScalability(const string &scalability);
+    void setScalability(const std::string &scalability);
 
-    const string &getDefaultDate() const;
+    const std::string &getDefaultDate() const;
 
-    void setDefaultDate(const string &defaultDate);
+    void setDefaultDate(const std::string &defaultDate);
 
-    const string &getTimeZone() const;
+    const std::string &getTimeZone() const;
 
-    void setTimeZone(const string &timeZone);
+    void setTimeZone(const std::string &timeZone);
 
-    const string &getCharset() const;
+    const std::string &getCharset() const;
 
-    void setCharset(const string &charset);
+    void setCharset(const std::string &charset);
 
-    const string &getIncomeDataPath() const;
+    const std::string &getIncomeDataPath() const;
 
-    void setIncomeDataPath(const string &incomeDataPath);
+    void setIncomeDataPath(const std::string &incomeDataPath);
 
-    const string &getOutcomeDataPath() const;
+    const std::string &getOutcomeDataPath() const;
 
-    void setOutcomeDataPath(const string &outcomeDataPath);
+    void setOutcomeDataPath(const std::string &outcomeDataPath);
 
-    const string &getLogFilePath() const;
+    const std::string &getLogFilePath() const;
 
-    void setLogFilePath(const string &logFilePath);
+    void setLogFilePath(const std::string &logFilePath);
 
-    const string &getIncomeFilesFormula() const;
+    const std::string &getIncomeFilesFormula() const;
 
-    void setIncomeFilesFormula(const string &incomeFilesFormula);
+    void setIncomeFilesFormula(const std::string &incomeFilesFormula);
 
-    const string &getLastFileFormula() const;
+    const std::string &getLastFileFormula() const;
 
-    void setLastFileFormula(const string &lastFileFormula);
+    void setLastFileFormula(const std::string &lastFileFormula);
 
-    const string &getOutcomeFilesFormula() const;
+    const std::string &getOutcomeFilesFormula() const;
 
-    void setOutcomeFilesFormula(const string &outcomeFilesFormula);
+    void setOutcomeFilesFormula(const std::string &outcomeFilesFormula);
 
-    const string &getCardFormula() const;
+    const std::string &getCardFormula() const;
 
-    void setCardFormula(const string &cardFormula);
+    void setCardFormula(const std::string &cardFormula);
 
-    const string &getFileMask1() const;
+    const std::string &getFileMask1() const;
 
-    void setFileMask1(const string &fileMask1);
+    void setFileMask1(const std::string &fileMask1);
 
-    const string &getFileMask2() const;
+    const std::string &getFileMask2() const;
 
-    void setFileMask2(const string &fileMask2);
+    void setFileMask2(const std::string &fileMask2);
 
-    const string &getFileMask3() const;
+    const std::string &getFileMask3() const;
 
-    void setFileMask3(const string &fileMask3);
+    void setFileMask3(const std::string &fileMask3);
 
-    const string &getFileMask4() const;
+    const std::string &getFileMask4() const;
 
-    void setFileMask4(const string &fileMask4);
+    void setFileMask4(const std::string &fileMask4);
 
-    const string &getFileMask5() const;
+    const std::string &getFileMask5() const;
 
-    void setFileMask5(const string &fileMask5);
+    void setFileMask5(const std::string &fileMask5);
 
     ~RegexMasterProperties();
 };

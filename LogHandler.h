@@ -9,27 +9,25 @@
 #include <ctime>
 #include <list>
 
-using namespace std;
-
 class LogHandler {
 
-    string line;
-    string charset;
-    string newFile;
+    std::string line;
+    std::string charset;
+    std::string newFile;
     struct tm* today;
     struct tm* formatter;
-    string logFilePath;
+    std::string logFilePath;
 
 public:
     LogHandler();
-    list<string> loadLogFile(string absolutePath);
+    std::list<std::string> loadLogFile(std::string absolutePath);
     void makeLogHeader();
     void makeLogFooter();
-    void searchLastFiles(string fileName);
-    void makeInfoMessage(string fileName);
-    void makeWarningMessage(string fileName);
-    void makeEmptyMessage(string fileName);
-    void makeErrorMessage(string fileName);
+    void searchLastFiles(std::string fileName);
+    void makeInfoMessage(std::string fileName);
+    void makeWarningMessage(std::string fileName);
+    void makeEmptyMessage(std::string fileName);
+    void makeErrorMessage(std::string fileName);
     ~LogHandler();
 };
 

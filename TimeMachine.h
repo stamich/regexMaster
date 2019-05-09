@@ -8,8 +8,6 @@
 #include <string>
 #include <ctime>
 
-using namespace std;
-
 class TimeMachine {
 
     time_t now = time(NULL);

@@ -6,7 +6,6 @@
 #define REGEXMASTER_REGEXMASTERPROPERTIESHANDLER_H
 
 #include <string>
-using namespace std;
 
 class RegexMasterPropertiesHandler {
 
@@ -32,13 +31,13 @@ class RegexMasterPropertiesHandler {
         FILE5_MASK
     };
 
-    string properties;
+    std::string properties;
 
 public:
     RegexMasterPropertiesHandler();
-    const string &getProperties(string properties) const;
-    const string loadConfigurationFile(string filePath);
-    const string ambiguityResolver();
+    const std::string &getProperties(std::string properties) const;
+    const std::string loadConfigurationFile(std::string filePath);
+    const std::string ambiguityResolver();
     ~RegexMasterPropertiesHandler();
 };
 

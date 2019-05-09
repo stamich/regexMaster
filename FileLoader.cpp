@@ -12,6 +12,7 @@
 #include "RegexMasterPropertiesHandler.h"
 
 using namespace std;
+
 namespace fs = std::experimental::filesystem;
 
 FileLoader::FileLoader(){
@@ -43,7 +44,7 @@ string FileLoader::handleInputFile(string absolutePath) {
 
 string FileLoader::getTheNewestFile(string absolutePath) {
 
-    string path = "/home/michal/test_files/";
+    std::string path = "/home/michal/test_files/";
     for (const auto & entry : fs::directory_iterator(absolutePath)) {
         cout << entry.path() << endl;
     }

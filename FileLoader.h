@@ -8,34 +8,32 @@
 #ifndef REGEXMASTER_FILELOADER_H
 #define REGEXMASTER_FILELOADER_H
 
-using namespace std;
-
 typedef double number;
 
-class StackTrace : exception{
+class StackTrace : std::exception{
     const char* what() const noexcept {
         return "The exception was thrown!\n";
     }
 };
 
 class FileLoader{
-    string line;
-    string newFile;
+    std::string line;
+    std::string newFile;
 
-    string name1;
-    string name2;
-    string name3;
+    std::string name1;
+    std::string name2;
+    std::string name3;
 
-    string regexCard;
-    string charset;
+    std::string regexCard;
+    std::string charset;
 
 public:
     FileLoader();
 
-    string handleInputFile(string absolutePath);
-    string getTheNewestFile(string absolutePath);
-    string getTheNewestFileByExtension(string path, string extension);
-    string getTheNewestFileByName(string path, string name);
+    std::string handleInputFile(std::string absolutePath);
+    std::string getTheNewestFile(std::string absolutePath);
+    std::string getTheNewestFileByExtension(std::string path, std::string extension);
+    std::string getTheNewestFileByName(std::string path, std::string name);
     ~FileLoader();
 };
 
