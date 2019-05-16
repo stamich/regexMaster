@@ -62,8 +62,8 @@ string FileLoader::getTheNewestFileByExtension(const string &filePath, const str
 //    return (filePath.size() >= extension.size()) && equal(extension.rbegin(), extension.rend(), filePath.rbegin());
 }
 
-string FileLoader::getTheNewestFileByName(const string path, const string name) {
-
+string FileLoader::getTheNewestFileByName(const string &filePath, const string &name) {
+    string path = "/home/michal/test_files";
 
 }
 

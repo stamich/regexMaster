@@ -33,7 +33,7 @@ public:
     std::string handleInputFile(const std::string &absolutePath);
     std::string getTheNewestFile(const std::string &absolutePath);
     std::string getTheNewestFileByExtension(const std::string &filePath, const std::string &extension);
-    std::string getTheNewestFileByName(const std::string path, const std::string name);
+    std::string getTheNewestFileByName(const std::string &filePath, const std::string &name);
     ~FileLoader();
 };
 
