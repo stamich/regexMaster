@@ -20,6 +20,24 @@ FileLoader::FileLoader(){
     charset = "UTF-8";
 }
 
+std::string FileLoader::loadConfigFile(string &path) {
+
+    path = "C:\\Users\\EB79OJ\\Projects\\CLionProjects\\fileLoader\\config.txt";
+    ifstream configFile;
+    string configLine;
+
+    configFile.open(path);
+
+    while (getline(configFile, configLine)){
+        istringstream iss(configLine);
+        int a, b;
+        if (!(iss >> a >> b))
+            break;
+    }
+
+    configFile.close();
+}
+
 string FileLoader::handleInputFile(const string &absolutePath) {
 
     string path = absolutePath;

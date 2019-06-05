@@ -30,6 +30,7 @@ class FileLoader{
 public:
     FileLoader();
 
+    std::string loadConfigFile(std::string &path);
     std::string handleInputFile(const std::string &absolutePath);
     std::string getTheNewestFile(const std::string &absolutePath);
     std::string getTheNewestFileByExtension(const std::string &filePath, const std::string &extension);

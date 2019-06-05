@@ -1,0 +1,35 @@
+VERSION=1.0
+ THREADS_RUNNING=1
+ INSTANCE_NUMBER=1
+ SCALABILITY=false
+ MATCH_PROPER_DATE=today
+ TIME_ZONE=UTC-1
+ CHARSET=UTF-8
+
+#Paths:
+ #INCOME_DATA_PATH=/visionabo/pliki/DBM/trans/
+ INCOME_DATA_PATH=C:\Users\EB79OJ\Projects\H2HReconciliation2\src\main\resources\in\
+ #OUTCOME_DATA_PATH=/visionabo/pliki/DBM/trans/OUTPUT/
+ OUTCOME_DATA_PATH=C:\Users\EB79OJ\Projects\H2HReconciliation2\src\main\resources\out\
+ #LOG_FILE_PATH=/visionabo/pliki/DBM/trans/OUTPUT/log/
+ LOG_FILE_PATH=C:\Users\EB79OJ\Projects\H2HReconciliation2\src\main\resources\log\
+ #CONFIG_FILE_PATH=/app/H2H/
+ CONFIG_FILE_PATH=C:\Users\EB79OJ\Projects\H2HReconciliation2\src\main\resources\config.txt
+
+#Regex formulas:
+ INCOME_FILES_FORMULA=([A-Z]{5}[_][A-Z]{6}([_]?|[0-9])(([_][A-Z]{3}[_])|[A-Z]{4}[_]|[A-Z]{3}[_]|[_]))
+ INCOME_FILE1_FORMULA=[A-Z]{5}[_][A-Z]{6}[0-9][_](?!.*REC)
+ INCOME_FILE2_FORMULA=[A-Z]{5}[_][A-Z]{6}[0-9][_][A-Z]{3}[_]
+ INCOME_FILE3_FORMULA=([A-Z]{5}[_][A-Z]{6}[_])(?!.*WING)(?!.*REC)
+ INCOME_FILE4_FORMULA=[A-Z]{5}[_][A-Z]{6}[_][A-Z]{3}[_]
+ INCOME_FILE5_FORMULA=[A-Z]{5}[_][A-Z]{6}[_][A-Z]{4}[_]
+ LAST_FILE_FORMULA=([^\]]+)$
+ OUTCOME_FILES_FORMULA=[0-9]{8}
+ CARD_FORMULA=[|][0-9]{16}[|]
+
+#Files:
+ FILE1_MASK=TRANS_PLANET4_
+ FILE2_MASK=TRANS_PLANET4_REC_
+ FILE3_MASK=TRANS_PLANET_
+ FILE4_MASK=TRANS_PLANET_REC_
+ FILE5_MASK=TRANS_PLANET_WING_

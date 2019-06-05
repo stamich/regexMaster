@@ -14,7 +14,7 @@ const string &RegexMasterPropertiesHandler::getProperties(string properties) con
     return properties;
 }
 
-const string RegexMasterPropertiesHandler::loadConfigurationFile(string filePath) {
+const string RegexMasterPropertiesHandler::loadConfigurationFile(string configPath) {
     string line;
 
     long lineCount;
@@ -22,7 +22,7 @@ const string RegexMasterPropertiesHandler::loadConfigurationFile(string filePath
     try {
 
     } catch (exception e){
-
+        e.what();
     }
 
 }
